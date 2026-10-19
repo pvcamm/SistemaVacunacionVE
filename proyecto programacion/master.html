@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles.css"><title>Panel Master</title></head><body>
+<header class="top"><div class="brand">Panel del administrador<small>Sistema Nacional de Vacunación</small></div><nav><span class="perfil">Perfil 1 · Master</span><a href="#filtros">Filtros</a><a href="#log">Log general</a><a href="login.html">Salir</a></nav></header>
+<main>
+<h1>Consulta de datos a nivel nacional</h1>
+<form class="card" id="filtros"><h2>Filtros</h2>
+<div class="grid">
+<div><label for="est">Estado</label><select id="est"><option>Todos</option><option>Amazonas</option><option>Anzoátegui</option><option>Apure</option><option>Aragua</option><option>Barinas</option><option>Bolívar</option><option>Carabobo</option><option>Cojedes</option><option>Delta Amacuro</option><option>Distrito Capital</option><option>Falcón</option><option>Guárico</option><option>La Guaira</option><option>Lara</option><option>Mérida</option><option>Miranda</option><option>Monagas</option><option>Nueva Esparta</option><option>Portuguesa</option><option>Sucre</option><option>Táchira</option><option>Trujillo</option><option>Yaracuy</option><option>Zulia</option></select></div>
+<div><label for="mun">Municipio</label><select id="mun"><option>Todos</option></select></div>
+<div><label for="par">Parroquia</label><select id="par"><option>Todas</option></select></div></div>
+<label class="check"><input type="checkbox"> Toda la nación</label>
+<div class="acciones"><button class="btn" type="button">Aplicar filtro</button><button class="btn borde" type="reset">Limpiar</button></div></form>
+<h2>Resultados</h2>
+<div class="tabla"><table><thead><tr><th>Estado</th><th>Municipio</th><th>Parroquia</th><th>Centro de salud</th><th>Vacunas aplicadas</th></tr></thead><tbody><tr><td>Miranda</td><td>Sucre</td><td>Petare</td><td>Ambulatorio Urbano</td><td>1.240</td></tr><tr><td>Zulia</td><td>Maracaibo</td><td>Olegario Villalobos</td><td>Hospital Central</td><td>2.087</td></tr></tbody></table></div>
+<h2 id="log">Log general</h2>
+<div class="tabla"><table><thead><tr><th>Usuario</th><th>Fecha</th><th>Hora</th><th>ID</th><th>Acción realizada</th></tr></thead><tbody><tr><td>admin</td><td>15/10/2026</td><td>10:42</td><td>8</td><td>Delete</td></tr><tr><td>centro_01</td><td>15/10/2026</td><td>10:15</td><td>7</td><td>Registro de vacuna</td></tr></tbody></table></div>
+</main><footer>Sistema Nacional de Vacunación · Fase 1: vistas (HTML y CSS). Datos de ejemplo.</footer></body></html>

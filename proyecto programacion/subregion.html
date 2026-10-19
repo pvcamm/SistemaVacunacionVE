@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles.css"><title>Subregión de salud</title></head><body>
+<header class="top"><div class="brand">Subregión de salud<small>Sistema Nacional de Vacunación</small></div><nav><span class="perfil">Perfil 3 · Subregión</span><a href="#cliente">Datos del cliente</a><a href="#solicitud">Solicitud</a><a href="login.html">Salir</a></nav></header>
+<main>
+<h1>Chequeo de exámenes y certificados de salud</h1>
+<form class="card"><label for="c4">Cédula del cliente</label><input id="c4"><button class="btn" type="button">Buscar</button></form>
+<section class="card" id="cliente"><h2>Datos del cliente</h2>
+<dl class="dato"><div><dt>Nombre</dt><dd>María Pérez</dd></div><div><dt>Cédula</dt><dd>V-12.345.678</dd></div><div><dt>Fecha de nacimiento</dt><dd>02/02/2024</dd></div><div><dt>Correo</dt><dd>maria@correo.com</dd></div><div><dt>Estado / Municipio</dt><dd>Miranda / Sucre</dd></div></dl>
+<h2>Exámenes (vacunas)</h2>
+<div class="tabla"><table><thead><tr><th>Vacuna</th><th>Fecha</th><th>Lote</th><th>Centro de salud</th><th>Estado</th></tr></thead><tbody><tr><td>BCG</td><td>12/03/2024</td><td>L-4471</td><td>Hospital Universitario</td><td><span class="badge ok">Aplicada</span></td></tr><tr><td>Pentavalente</td><td>14/05/2024</td><td>L-5120</td><td>Ambulatorio Urbano</td><td><span class="badge ok">Aplicada</span></td></tr><tr><td>Triple viral</td><td>—</td><td>—</td><td>—</td><td><span class="badge falta">Falta</span></td></tr></tbody></table></div></section>
+<form class="card" id="solicitud"><h2>Solicitud de certificado de salud</h2>
+<label for="m">Motivo (obligatorio al rechazar)</label><textarea id="m" rows="3" placeholder="Ej.: falta la vacuna triple viral"></textarea>
+<p class="nota">Al procesar o rechazar, se envía un mensaje al correo del cliente.</p>
+<div class="acciones"><button class="btn" type="button">Procesar solicitud</button><button class="btn rojo" type="button">Rechazar solicitud</button></div></form>
+</main><footer>Sistema Nacional de Vacunación · Fase 1: vistas (HTML y CSS). Datos de ejemplo.</footer></body></html>

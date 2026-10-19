@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles.css"><title>Consulta pública · Vacunación</title></head><body>
+<header class="top"><div class="brand">Sistema Nacional de Vacunación<small>República Bolivariana de Venezuela</small></div><nav><a href="index.html" aria-current="page">Consulta pública</a><a href="login.html">Acceso del personal</a></nav></header>
+<main>
+<h1>Consulta tu tarjeta de vacunación</h1>
+<p class="nota">Escribe tu cédula y tu fecha de nacimiento para ver tus vacunas.</p>
+<form class="card"><div class="grid">
+<div><label for="ced">Cédula de identidad</label><input id="ced" inputmode="numeric" placeholder="V-12345678"></div>
+<div><label for="fec">Fecha de nacimiento</label><input id="fec" type="date"></div></div>
+<button class="btn" type="button">Consultar</button></form>
+<section class="card" aria-label="Resultado de la consulta">
+<h2>Tarjeta de vacunación</h2>
+<dl class="dato"><div><dt>Nombre</dt><dd>María Pérez</dd></div><div><dt>Cédula</dt><dd>V-12.345.678</dd></div><div><dt>Fecha de nacimiento</dt><dd>02/02/2024</dd></div></dl>
+<div class="tabla"><table><thead><tr><th>Vacuna</th><th>Fecha</th><th>Hora</th><th>Lote</th><th>Centro de salud</th></tr></thead><tbody><tr><td>BCG</td><td>12/03/2024</td><td>9:10 a. m.</td><td>L-4471</td><td>Hospital Universitario</td></tr><tr><td>Pentavalente</td><td>14/05/2024</td><td>10:30 a. m.</td><td>L-5120</td><td>Ambulatorio Urbano</td></tr></tbody></table></div>
+<div class="acciones"><button class="btn" type="button">Enviar al correo</button></div>
+</section></main><footer>Sistema Nacional de Vacunación · Fase 1: vistas (HTML y CSS). Datos de ejemplo.</footer></body></html>

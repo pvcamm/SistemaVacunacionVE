@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles.css"><title>Centro de salud</title></head><body>
+<header class="top"><div class="brand">Centro de salud<small>Sistema Nacional de Vacunación</small></div><nav><span class="perfil">Perfil 2 · Centro de salud</span><a href="#persona">Registrar persona</a><a href="#vacuna">Registrar vacuna</a><a href="#consulta">Consultar</a><a href="login.html">Salir</a></nav></header>
+<main>
+<h1>Registro de personas y vacunas</h1>
+<form class="card" id="persona"><h2>Registrar persona</h2><div class="grid">
+<div><label for="c1">Cédula</label><input id="c1"></div><div><label for="n1">Nombres</label><input id="n1"></div><div><label for="a1">Apellidos</label><input id="a1"></div>
+<div><label for="f1">Fecha de nacimiento</label><input id="f1" type="date"></div><div><label for="e1">Correo electrónico</label><input id="e1" type="email"></div><div><label for="t1">Teléfono</label><input id="t1" type="tel"></div></div>
+<button class="btn" type="button">Guardar persona</button></form>
+<form class="card" id="vacuna"><h2>Registrar vacuna</h2><div class="grid">
+<div><label for="c2">Cédula de la persona</label><input id="c2"></div>
+<div><label for="v2">Vacuna</label><select id="v2"><option>Seleccionar</option><option>BCG</option><option>Hepatitis B</option><option>Pentavalente</option><option>Polio</option><option>Rotavirus</option><option>Neumococo</option><option>Triple viral</option><option>Fiebre amarilla</option><option>Influenza</option><option>Td</option></select></div>
+<div><label for="d2">Fecha</label><input id="d2" type="date"></div><div><label for="h2">Hora</label><input id="h2" type="time"></div>
+<div><label for="l2">Lote</label><input id="l2"></div><div><label for="s2">Centro de salud</label><select id="s2"><option>Hospital Universitario</option><option>Ambulatorio Urbano</option></select></div></div>
+<button class="btn" type="button">Guardar vacuna</button></form>
+<section id="consulta"><h2>Consultar registros</h2>
+<form class="card"><label for="c3">Cédula</label><input id="c3"><button class="btn" type="button">Buscar</button></form>
+<div class="tabla"><table><thead><tr><th>Vacuna</th><th>Fecha</th><th>Hora</th><th>Lote</th><th>Centro de salud</th></tr></thead><tbody><tr><td>BCG</td><td>12/03/2024</td><td>9:10 a. m.</td><td>L-4471</td><td>Hospital Universitario</td></tr><tr><td>Pentavalente</td><td>14/05/2024</td><td>10:30 a. m.</td><td>L-5120</td><td>Ambulatorio Urbano</td></tr></tbody></table></div></section></main><footer>Sistema Nacional de Vacunación · Fase 1: vistas (HTML y CSS). Datos de ejemplo.</footer></body></html>
