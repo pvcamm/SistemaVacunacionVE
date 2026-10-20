@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso del Personal · Sistema Nacional de Vacunación</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      Sistema Nacional de Vacunación
+      <small>Módulo de Autenticación Institucional</small>
+    </div>
+    <nav>
+      <a href="index.html">Consulta Pública</a>
+      <a href="login.html" aria-current="page">Acceso del Personal</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 440px; margin-top: 64px;">
+    <div class="card">
+      <h1 style="font-size: 1.5rem; text-align: center; margin-bottom: 1.5rem;">Iniciar Sesión</h1>
+      
+      <form>
+        <label for="rol">Seleccione su Perfil</label>
+        <select id="rol" style="margin-bottom: 16px;">
+          <option value="admin">Perfil 1: Master / Administrador</option>
+          <option value="centro">Perfil 2: Operador de Centro de Salud</option>
+          <option value="subregion">Perfil 3: Subregión de Salud</option>
+        </select>
+
+        <label for="u">Usuario o Correo Institucional</label>
+        <input id="u" type="text" autocomplete="username" placeholder="usuario.sistema" required>
+
+        <label for="p">Contraseña de Acceso</label>
+        <input id="p" type="password" autocomplete="current-password" placeholder="••••••••" required>
+
+        <div class="acciones" style="margin-top: 24px;">
+          <button class="btn" type="button" style="width: 100%;">Ingresar al Sistema</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    Sistema Nacional de Vacunación · Acceso Restringido y Monitoreado
+  </footer>
+</body>
+</html>

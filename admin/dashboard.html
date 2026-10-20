@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Master · Sistema Nacional de Vacunación</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      Panel de Control Global
+      <small>Sistema Nacional de Vacunación</small>
+    </div>
+    <nav>
+      <span class="perfil">Perfil 1 · Master</span>
+      <a href="#filtros">Filtros Nacionales</a>
+      <a href="#log">Auditoría / Bitácora</a>
+      <a href="../login.html" class="rojo" style="padding: 4px 10px; border-radius: 4px; background: rgba(179,54,47,0.2);">Salir</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Supervisión y Control de Data Nacional</h1>
+    <p class="nota">Gestión unificada de registros epidemiológicos y trazabilidad del sistema a nivel nacional.</p>
+
+    <form class="card" id="filtros">
+      <h2>Filtros Geográficos de Búsqueda Masiva</h2>
+      <div class="grid">
+        <div>
+          <label for="est">Estado</label>
+          <select id="est">
+            <option>Todos los Estados</option>
+            <option>Amazonas</option><option>Anzoátegui</option><option>Apure</option><option>Aragua</option>
+            <option>Barinas</option><option>Bolívar</option><option>Carabobo</option><option>Cojedes</option>
+            <option>Delta Amacuro</option><option>Distrito Capital</option><option>Falcón</option><option selected>Guárico</option>
+            <option>La Guaira</option><option>Lara</option><option>Mérida</option><option>Miranda</option>
+            <option>Monagas</option><option>Nueva Esparta</option><option>Portuguesa</option><option>Sucre</option>
+            <option>Táchira</option><option>Trujillo</option><option>Yaracuy</option><option>Zulia</option>
+          </select>
+        </div>
+        <div>
+          <label for="mun">Municipio</label>
+          <select id="mun">
+            <option>Municipio Juan Germán Roscio</option>
+            <option>Municipio Infante</option>
+          </select>
+        </div>
+        <div>
+          <label for="par">Parroquia</label>
+          <select id="par">
+            <option>Parroquia San Juan de los Morros</option>
+            <option>Parroquia Cantagallo</option>
+          </select>
+        </div>
+      </div>
+      <div class="acciones" style="margin-top: 20px;">
+        <button class="btn" type="button">Aplicar Filtro Avanzado</button>
+        <button class="btn borde" type="reset">Restablecer</button>
+      </div>
+    </form>
+
+    <h2>Reportes de Vacunación Consolidada</h2>
+    <div class="tabla">
+      <table>
+        <thead>
+          <tr>
+            <th>Estado</th>
+            <th>Municipio</th>
+            <th>Parroquia</th>
+            <th>Centro de Salud Asignado</th>
+            <th>Total Dosis Aplicadas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Guárico</td>
+            <td>Juan Germán Roscio</td>
+            <td>San Juan de los Morros</td>
+            <td>Hospital Dr. Israel Ranuárez Balza</td>
+            <td><strong>4.820</strong></td>
+          </tr>
+          <tr>
+            <td>Miranda</td>
+            <td>Sucre</td>
+            <td>Petare</td>
+            <td>Ambulatorio Urbano Dr. Fruto Vivas</td>
+            <td><strong>1.240</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="log">Bitácora de Auditoría del Sistema ("Cámara del Máster")</h2>
+    <div class="tabla">
+      <table>
+        <thead>
+          <tr>
+            <th>Usuario Responsable</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>ID Registro</th>
+            <th>Acción Registrada (CRUD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>admin_master</td>
+            <td>19/10/2026</td>
+            <td>10:42 p. m.</td>
+            <td>#8492</td>
+            <td><span class="badge" style="background: #F8DEDB; color: #B3362F;">DELETE</span> Eliminación de registro duplicado</td>
+          </tr>
+          <tr>
+            <td>operador_guarico</td>
+            <td>19/10/2026</td>
+            <td>09:15 p. m.</td>
+            <td>#8491</td>
+            <td><span class="badge" style="background: #D9F0E8; color: #1B8A6B;">CREATE</span> Carga de nueva vacuna</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    Sistema Nacional de Vacunación · Módulo de Administración Centralizada
+  </footer>
+</body>
+</html>

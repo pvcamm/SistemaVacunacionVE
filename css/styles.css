@@ -1,0 +1,210 @@
+:root {
+  --azul-institucional: #163A5A;
+  --turquesa-sanitario: #167D8D;
+  --gris-claro: #F4F7FA;
+  --blanco: #FFFFFF;
+  --tinta: #1D2733;
+  --gris-texto: #5A6775;
+  --linea: #D5DDE5;
+  --alerta-rojo: #B3362F;
+  --alerta-verde: #1B8A6B;
+  --acento-amarillo: #F4B52A;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--tinta);
+  background-color: var(--gris-claro);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  color: var(--azul-institucional);
+  margin-top: 0;
+}
+
+h1 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 0.5rem; }
+h2 { font-size: 1.3rem; margin-bottom: 1rem; border-bottom: 2px solid var(--linea); padding-bottom: 0.5rem; }
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul-institucional);
+  color: var(--blanco);
+  padding: 16px 32px;
+  border-bottom: 4px solid var(--turquesa-sanitario);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.brand small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.top nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.top nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.top nav a:hover, .top nav a[aria-current] {
+  color: var(--acento-amarillo);
+}
+
+.perfil {
+  background-color: var(--turquesa-sanitario);
+  color: var(--blanco);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+.card {
+  background-color: var(--blanco);
+  border: 1px solid var(--linea);
+  border-top: 5px solid var(--turquesa-sanitario);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--azul-institucional);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  font: inherit;
+  background-color: var(--blanco);
+  color: var(--tinta);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--turquesa-sanitario);
+  box-shadow: 0 0 0 3px rgba(22, 125, 141, 0.15);
+}
+
+.btn {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--turquesa-sanitario);
+  color: var(--blanco);
+  text-decoration: none;
+  text-align: center;
+  transition: filter 0.2s, transform 0.1s;
+}
+
+.btn:hover { filter: brightness(1.08); }
+.btn:active { transform: scale(0.98); }
+.btn.rojo { background-color: var(--alerta-rojo); }
+.btn.borde { background-color: transparent; border: 2px solid var(--azul-institucional); color: var(--azul-institucional); }
+
+.acciones {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.tabla {
+  overflow-x: auto;
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  background-color: var(--blanco);
+  margin-bottom: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--linea);
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: var(--azul-institucional);
+  color: var(--blanco);
+  font-weight: 600;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background-color: rgba(244, 247, 250, 0.6); }
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge.ok { background-color: #D9F0E8; color: var(--alerta-verde); }
+.badge.falta { background-color: #F8DEDB; color: var(--alerta-rojo); }
+
+.nota {
+  color: var(--gris-texto);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 32px;
+  color: var(--gris-texto);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--linea);
+  margin-top: 48px;
+}

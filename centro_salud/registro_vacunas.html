@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Salud · Registro Operativo</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      Módulo de Centros de Salud
+      <small>Sistema Nacional de Vacunación</small>
+    </div>
+    <nav>
+      <span class="perfil">Perfil 2 · Operador</span>
+      <a href="#persona">Registrar Persona</a>
+      <a href="#vacuna">Registrar Dosis</a>
+      <a href="../login.html" style="opacity: 0.8;">Salir</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Registro Diario de Inmunización</h1>
+    <p class="nota">Módulo operativo para la carga de nuevos ciudadanos y control de vacunas aplicadas en centro asistencial.</p>
+
+    <form class="card" id="persona">
+      <h2>1. Registro de Datos del Ciudadano</h2>
+      <div class="grid">
+        <div><label for="c1">Cédula de Identidad</label><input id="c1" placeholder="V-XXXXXXXX"></div>
+        <div><label for="n1">Nombres</label><input id="n1" placeholder="Nombres completos"></div>
+        <div><label for="a1">Apellidos</label><input id="a1" placeholder="Apellidos completos"></div>
+        <div><label for="f1">Fecha de Nacimiento</label><input id="f1" type="date"></div>
+        <div><label for="e1">Correo Electrónico</label><input id="e1" type="email" placeholder="correo@dominio.com"></div>
+        <div><label for="t1">Teléfono de Contacto</label><input id="t1" type="tel" placeholder="0412-1234567"></div>
+      </div>
+      <div class="acciones"><button class="btn" type="button">Guardar Ciudadano</button></div>
+    </form>
+
+    <form class="card" id="vacuna">
+      <h2>2. Registro de Aplicación de Vacuna</h2>
+      <div class="grid">
+        <div><label for="c2">Cédula del Paciente</label><input id="c2" placeholder="V-XXXXXXXX"></div>
+        <div>
+          <label for="v2">Tipo de Vacuna</label>
+          <select id="v2">
+            <option>Seleccionar vacuna...</option>
+            <option>BCG</option><option>Hepatitis B</option><option>Pentavalente</option>
+            <option>Polio</option><option>Rotavirus</option><option>Neumococo</option>
+            <option>Triple viral</option><option>Fiebre amarilla</option><option>Influenza</option><option>Td</option>
+          </select>
+        </div>
+        <div><label for="d2">Fecha de Aplicación</label><input id="d2" type="date"></div>
+        <div><label for="h2">Hora</label><input id="h2" type="time"></div>
+        <div><label for="l2">Número de Lote</label><input id="l2" placeholder="Lote del biológico"></div>
+        <div>
+          <label for="s2">Centro de Salud</label>
+          <select id="s2">
+            <option>Hospital Dr. Israel Ranuárez Balza</option>
+            <option>Ambulatorio Urbano San Juan</option>
+          </select>
+        </div>
+      </div>
+      <div class="acciones"><button class="btn" type="button">Registrar Dosis Aplicada</button></div>
+    </form>
+  </main>
+
+  <footer>
+    Sistema Nacional de Vacunación · Operaciones en Centros de Salud
+  </footer>
+</body>
+</html>
