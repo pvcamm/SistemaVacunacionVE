@@ -4,47 +4,162 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acceso del Personal · Sistema Nacional de Vacunación</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Estilos Globales -->
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Estética Profesional y Fondo Inmersivo para el Login */
+    body.login-body {
+      background: linear-gradient(135deg, #0a192f 0%, #163a5a 50%, #167d8d 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body.login-body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(0, 242, 254, 0.15) 0%, transparent 40%),
+                  radial-gradient(circle at 20% 80%, rgba(22, 125, 141, 0.2) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .card-login-pro {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 24px;
+      box-shadow: 0 25px 50px -12px rgba(10, 25, 47, 0.5);
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card-login-pro:hover {
+      box-shadow: 0 30px 60px -12px rgba(22, 125, 141, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .login-icon-box {
+      width: 75px;
+      height: 75px;
+      background: linear-gradient(135deg, var(--azul-gob), var(--turquesa));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0 10px 20px rgba(22, 125, 141, 0.3);
+      margin: 0 auto 1.25rem auto;
+    }
+  </style>
 </head>
-<body>
-  <header class="top">
-    <div class="brand">
-      Sistema Nacional de Vacunación
-      <small>Módulo de Autenticación Institucional</small>
-    </div>
-    <nav>
-      <a href="index.html">Consulta Pública</a>
-      <a href="login.html" aria-current="page">Acceso del Personal</a>
-    </nav>
-  </header>
+<body class="login-body">
 
-  <main style="max-width: 440px; margin-top: 64px;">
-    <div class="card">
-      <h1 style="font-size: 1.5rem; text-align: center; margin-bottom: 1.5rem;">Iniciar Sesión</h1>
-      
-      <form>
-        <label for="rol">Seleccione su Perfil</label>
-        <select id="rol" style="margin-bottom: 16px;">
-          <option value="admin">Perfil 1: Master / Administrador</option>
-          <option value="centro">Perfil 2: Operador de Centro de Salud</option>
-          <option value="subregion">Perfil 3: Subregión de Salud</option>
-        </select>
-
-        <label for="u">Usuario o Correo Institucional</label>
-        <input id="u" type="text" autocomplete="username" placeholder="usuario.sistema" required>
-
-        <label for="p">Contraseña de Acceso</label>
-        <input id="p" type="password" autocomplete="current-password" placeholder="••••••••" required>
-
-        <div class="acciones" style="margin-top: 24px;">
-          <button class="btn" type="button" style="width: 100%;">Ingresar al Sistema</button>
+  <!-- Navbar de Acceso -->
+  <nav class="navbar navbar-dark navbar-institucional">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fa-solid fa-shield-virus fa-2x me-3 text-info"></i>
+        <div>
+          <span class="brand-text">SISTEMA NACIONAL DE VACUNACIÓN</span>
+          <small class="brand-subtext">Módulo Autenticado de Personal</small>
         </div>
-      </form>
+      </a>
+      <a href="index.html" class="btn btn-outline-light btn-sm px-3 shadow-sm">
+        <i class="fa-solid fa-house me-1"></i>Portal Público
+      </a>
+    </div>
+  </nav>
+
+  <!-- Contenedor Principal del Formulario -->
+  <main class="container my-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card card-login-pro p-4 p-md-5">
+          
+          <div class="text-center mb-4">
+            <div class="login-icon-box">
+              <i class="fa-solid fa-user-shield fa-2x"></i>
+            </div>
+            <h3 class="fw-bold text-azul mb-1">Acceso del Personal Autorizado</h3>
+            <p class="text-muted small">Seleccione su perfil institucional e ingrese sus credenciales de seguridad</p>
+          </div>
+
+          <form id="loginForm" onsubmit="event.preventDefault(); iniciarSesion();">
+            <div class="mb-4">
+              <label class="form-label fw-bold text-azul">Seleccione su Perfil de Acceso</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-id-badge text-muted"></i></span>
+                <select id="selectPerfil" class="form-select form-select-lg border-start-0 ps-0">
+                  <option value="1">Perfil 1: Master / Administrador Global</option>
+                  <option value="2" selected>Perfil 2: Operador de Centro de Salud</option>
+                  <option value="3">Perfil 3: Subregión de Salud</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold text-azul">Usuario Institucional</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-user text-muted"></i></span>
+                <input type="text" id="inputUsuario" class="form-control form-control-lg border-start-0 ps-0" placeholder="Ej. operador.sanidad" required>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold text-azul">Contraseña de Seguridad</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-lock text-muted"></i></span>
+                <input type="password" id="inputPassword" class="form-control form-control-lg border-start-0 ps-0" placeholder="••••••••" required>
+              </div>
+            </div>
+
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-turquesa py-3 fs-5 shadow">
+                <i class="fa-solid fa-right-to-bracket me-2"></i>Ingresar al Sistema
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
     </div>
   </main>
 
-  <footer>
-    Sistema Nacional de Vacunación · Acceso Restringido y Monitoreado
+  <!-- Footer -->
+  <footer class="py-3 text-center text-light opacity-75 small border-top border-secondary mt-auto" style="background-color: rgba(10, 25, 47, 0.9);">
+    República Bolivariana de Venezuela · Ministerio del Poder Popular para la Salud · Sistema Nacional de Vacunación © 2026
   </footer>
+
+  <!-- Script de Conexión de Perfiles -->
+  <script>
+    function iniciarSesion() {
+      const perfil = document.getElementById('selectPerfil').value;
+      const usuario = document.getElementById('inputUsuario').value;
+      const password = document.getElementById('inputPassword').value;
+
+      if (!usuario || !password) {
+        alert('Por favor, complete todos los campos de acceso.');
+        return;
+      }
+
+      // Redirección exacta según el perfil seleccionado
+      if (perfil === '1') {
+        window.location.href = 'admin/dashboard.html';
+      } else if (perfil === '2') {
+        window.location.href = 'centro_salud/registro_vacunas.html';
+      } else if (perfil === '3') {
+        window.location.href = 'subregion/procesar_solicitud.html';
+      }
+    }
+  </script>
 </body>
 </html>

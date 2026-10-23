@@ -3,128 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel Master · Sistema Nacional de Vacunación</title>
+  <title>Panel Master · Administración Nacional</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <header class="top">
-    <div class="brand">
-      Panel de Control Global
-      <small>Sistema Nacional de Vacunación</small>
+  <nav class="navbar navbar-dark navbar-institucional">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <i class="fa-solid fa-user-gear fa-2x me-3 text-info"></i>
+        <div>
+          <span class="brand-text">PANEL MASTER GENERAL DE ADMINISTRACIÓN</span>
+          <small class="brand-subtext">Perfil 1 · Control Epidemiológico Nacional</small>
+        </div>
+      </a>
+      <div class="d-flex gap-2">
+        <a href="gestion-usuarios.html" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-users me-1"></i>Usuarios</a>
+        <a href="bitacora.html" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-shield-cat me-1"></i>Bitácora</a>
+        <a href="../login.html" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-power-off me-1"></i>Salir</a>
+      </div>
     </div>
-    <nav>
-      <span class="perfil">Perfil 1 · Master</span>
-      <a href="#filtros">Filtros Nacionales</a>
-      <a href="#log">Auditoría / Bitácora</a>
-      <a href="../login.html" class="rojo" style="padding: 4px 10px; border-radius: 4px; background: rgba(179,54,47,0.2);">Salir</a>
-    </nav>
-  </header>
+  </nav>
 
-  <main>
-    <h1>Supervisión y Control de Data Nacional</h1>
-    <p class="nota">Gestión unificada de registros epidemiológicos y trazabilidad del sistema a nivel nacional.</p>
-
-    <form class="card" id="filtros">
-      <h2>Filtros Geográficos de Búsqueda Masiva</h2>
-      <div class="grid">
-        <div>
-          <label for="est">Estado</label>
-          <select id="est">
-            <option>Todos los Estados</option>
-            <option>Amazonas</option><option>Anzoátegui</option><option>Apure</option><option>Aragua</option>
-            <option>Barinas</option><option>Bolívar</option><option>Carabobo</option><option>Cojedes</option>
-            <option>Delta Amacuro</option><option>Distrito Capital</option><option>Falcón</option><option selected>Guárico</option>
-            <option>La Guaira</option><option>Lara</option><option>Mérida</option><option>Miranda</option>
-            <option>Monagas</option><option>Nueva Esparta</option><option>Portuguesa</option><option>Sucre</option>
-            <option>Táchira</option><option>Trujillo</option><option>Yaracuy</option><option>Zulia</option>
-          </select>
-        </div>
-        <div>
-          <label for="mun">Municipio</label>
-          <select id="mun">
-            <option>Municipio Juan Germán Roscio</option>
-            <option>Municipio Infante</option>
-          </select>
-        </div>
-        <div>
-          <label for="par">Parroquia</label>
-          <select id="par">
-            <option>Parroquia San Juan de los Morros</option>
-            <option>Parroquia Cantagallo</option>
-          </select>
+  <main class="container-fluid px-lg-5 my-5">
+    <div class="row g-4 mb-5">
+      <div class="col-md-3">
+        <div class="card card-futurista p-4 border-start border-4 border-info">
+          <span class="text-muted small fw-bold text-uppercase">Total Dosis Aplicadas</span>
+          <h2 class="fw-bold text-azul mb-0">1.482.910</h2>
         </div>
       </div>
-      <div class="acciones" style="margin-top: 20px;">
-        <button class="btn" type="button">Aplicar Filtro Avanzado</button>
-        <button class="btn borde" type="reset">Restablecer</button>
+      <div class="col-md-3">
+        <div class="card card-futurista p-4 border-start border-4 border-success">
+          <span class="text-muted small fw-bold text-uppercase">Centros Activos</span>
+          <h2 class="fw-bold text-azul mb-0">348</h2>
+        </div>
       </div>
-    </form>
-
-    <h2>Reportes de Vacunación Consolidada</h2>
-    <div class="tabla">
-      <table>
-        <thead>
-          <tr>
-            <th>Estado</th>
-            <th>Municipio</th>
-            <th>Parroquia</th>
-            <th>Centro de Salud Asignado</th>
-            <th>Total Dosis Aplicadas</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Guárico</td>
-            <td>Juan Germán Roscio</td>
-            <td>San Juan de los Morros</td>
-            <td>Hospital Dr. Israel Ranuárez Balza</td>
-            <td><strong>4.820</strong></td>
-          </tr>
-          <tr>
-            <td>Miranda</td>
-            <td>Sucre</td>
-            <td>Petare</td>
-            <td>Ambulatorio Urbano Dr. Fruto Vivas</td>
-            <td><strong>1.240</strong></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="col-md-3">
+        <div class="card card-futurista p-4 border-start border-4 border-warning">
+          <span class="text-muted small fw-bold text-uppercase">Solicitudes Pendientes</span>
+          <h2 class="fw-bold text-azul mb-0">412</h2>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card card-futurista p-4 border-start border-4 border-danger">
+          <span class="text-muted small fw-bold text-uppercase">Eventos Auditoría</span>
+          <h2 class="fw-bold text-azul mb-0">8.921</h2>
+        </div>
+      </div>
     </div>
 
-    <h2 id="log">Bitácora de Auditoría del Sistema ("Cámara del Máster")</h2>
-    <div class="tabla">
-      <table>
-        <thead>
-          <tr>
-            <th>Usuario Responsable</th>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>ID Registro</th>
-            <th>Acción Registrada (CRUD)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>admin_master</td>
-            <td>19/10/2026</td>
-            <td>10:42 p. m.</td>
-            <td>#8492</td>
-            <td><span class="badge" style="background: #F8DEDB; color: #B3362F;">DELETE</span> Eliminación de registro duplicado</td>
-          </tr>
-          <tr>
-            <td>operador_guarico</td>
-            <td>19/10/2026</td>
-            <td>09:15 p. m.</td>
-            <td>#8491</td>
-            <td><span class="badge" style="background: #D9F0E8; color: #1B8A6B;">CREATE</span> Carga de nueva vacuna</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="card card-futurista p-4 p-md-5 mb-5">
+      <h4 class="fw-bold text-azul mb-4"><i class="fa-solid fa-earth-americas text-info me-2"></i>Filtros Geográficos de Búsqueda Masiva</h4>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label">Estado</label>
+          <select class="form-select">
+            <option selected>Guárico</option>
+            <option>Miranda</option><option>Zulia</option><option>Distrito Capital</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Municipio</label>
+          <select class="form-select"><option selected>Juan Germán Roscio</option></select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Parroquia</label>
+          <select class="form-select"><option selected>San Juan de los Morros</option></select>
+        </div>
+      </div>
     </div>
   </main>
 
-  <footer>
-    Sistema Nacional de Vacunación · Módulo de Administración Centralizada
-  </footer>
+  <footer>República Bolivariana de Venezuela · Sistema Nacional de Vacunación © 2026</footer>
 </body>
 </html>

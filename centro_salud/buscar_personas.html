@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador Clínico · Centro de Salud</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark navbar-institucional">
+    <div class="container">
+      <span class="brand-text">BUSCADOR CLÍNICO DE PACIENTES</span>
+      <a href="registro_vacunas.html" class="btn btn-outline-light btn-sm"><i class="fa-solid fa-arrow-left me-1"></i>Volver al Registro</a>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="card card-futurista p-4 p-md-5">
+      <h4 class="fw-bold text-azul mb-4"><i class="fa-solid fa-magnifying-glass text-info me-2"></i>Consulta Rápida de Historial Clínico</h4>
+      <div class="input-group mb-4">
+        <input type="text" class="form-control form-control-lg" placeholder="Ingrese número de cédula del paciente...">
+        <button class="btn btn-turquesa px-4" type="button">Buscar</button>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-custom align-middle">
+          <thead><tr><th>Cédula</th><th>Ciudadano</th><th>Última Dosis</th><th>Acciones</th></tr></thead>
+          <tbody><tr><td><strong>V-28.123.456</strong></td><td>Paola Camaripano</td><td>Pentavalente</td><td><button class="btn btn-sm btn-outline-primary">Ver Ficha</button></td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer>República Bolivariana de Venezuela · Sistema Nacional de Vacunación © 2026</footer>
+</body>
+</html>

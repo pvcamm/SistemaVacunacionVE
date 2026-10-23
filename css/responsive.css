@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .hero-landing { padding: 40px 15px; text-align: center; }
+  .card-futurista { padding: 1.25rem !important; }
+  .navbar-brand span { font-size: 0.95rem; }
+}

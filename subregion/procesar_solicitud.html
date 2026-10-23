@@ -3,98 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Subregión de Salud · Validación de Solicitudes</title>
+  <title>Subregión de Salud · Certificación</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <header class="top">
-    <div class="brand">
-      Módulo de Subregión de Salud
-      <small>Sistema Nacional de Vacunación</small>
+  <nav class="navbar navbar-dark navbar-institucional">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <i class="fa-solid fa-building-columns fa-2x me-3 text-info"></i>
+        <div>
+          <span class="brand-text">SUBREGIÓN DE SALUD / SANIDAD REGIONAL</span>
+          <small class="brand-subtext">Perfil 3 · Evaluación Epidemiológica y Emisión</small>
+        </div>
+      </a>
+      <a href="../login.html" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-power-off me-1"></i>Salir</a>
     </div>
-    <nav>
-      <span class="perfil">Perfil 3 · Subregión</span>
-      <a href="#cliente">Expediente</a>
-      <a href="#solicitud">Evaluación y Promesa</a>
-      <a href="../login.html" style="opacity: 0.8;">Salir</a>
-    </nav>
-  </header>
+  </nav>
 
-  <main>
-    <h1>Chequeo de Exámenes y Certificados de Salud</h1>
-    <p class="nota">Validación de expedientes médicos y emisión de certificados oficiales de vacunación.</p>
+  <main class="container my-5">
+    <div class="card card-futurista p-4 p-md-5">
+      <h4 class="fw-bold text-azul mb-4"><i class="fa-solid fa-file-signature text-info me-2"></i>Evaluación de Expediente y Flujo "La Promesa"</h4>
 
-    <form class="card">
-      <label for="c4">Buscar Ciudadano por Cédula</label>
-      <div style="display: flex; gap: 12px;">
-        <input id="c4" placeholder="Ingrese número de cédula..." style="margin-bottom: 0;">
-        <button class="btn" type="button" style="white-space: nowrap;">Buscar Expediente</button>
-      </div>
-    </form>
-
-    <section class="card" id="cliente">
-      <h2>Expediente del Ciudadano</h2>
-      <div class="grid" style="background: var(--gris-claro); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
-        <div><strong>Nombre:</strong> María Valentina Pérez Gómez</div>
-        <div><strong>Cédula:</strong> V-12.345.678</div>
-        <div><strong>Fecha de Nacimiento:</strong> 02/02/2024</div>
-        <div><strong>Correo:</strong> maria.perez@correo.com</div>
-        <div><strong>Jurisdicción:</strong> Guárico / Roscio</div>
+      <div class="row g-3 mb-4 bg-light p-3 rounded border">
+        <div class="col-md-3"><strong>Ciudadano:</strong> Paola Camaripano</div>
+        <div class="col-md-3"><strong>Cédula:</strong> V-28.123.456</div>
+        <div class="col-md-3"><strong>Correo:</strong> paola@ejemplo.com</div>
+        <div class="col-md-3"><strong>Jurisdicción:</strong> Guárico / Roscio</div>
       </div>
 
-      <h2>Historial de Vacunas y Exámenes Requeridos</h2>
-      <div class="tabla">
-        <table>
-          <thead>
-            <tr>
-              <th>Vacuna / Recaudo</th>
-              <th>Fecha</th>
-              <th>Lote</th>
-              <th>Centro de Salud</th>
-              <th>Estatus</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>BCG</td>
-              <td>12/03/2024</td>
-              <td>L-4471</td>
-              <td>Hospital Universitario</td>
-              <td><span class="badge ok">Aplicada</span></td>
-            </tr>
-            <tr>
-              <td>Pentavalente</td>
-              <td>14/05/2024</td>
-              <td>L-5120</td>
-              <td>Ambulatorio Urbano</td>
-              <td><span class="badge ok">Aplicada</span></td>
-            </tr>
-            <tr>
-              <td>Triple Viral</td>
-              <td>—</td>
-              <td>—</td>
-              <td>—</td>
-              <td><span class="badge falta">Falta / Pendiente</span></td>
-            </tr>
-          </tbody>
-        </table>
+      <h5 class="fw-bold text-azul mb-3">1. Soportes y Exámenes Externos Anexados</h5>
+      <div class="p-3 bg-white border rounded mb-4 d-flex justify-content-between align-items-center">
+        <span><i class="fa-solid fa-file-pdf text-danger me-2"></i> <strong>Serologia_Anticuerpos.pdf</strong> (Cargado por Centro de Salud)</span>
+        <a href="examenes_salud.html" class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-eye me-1"></i>Ver Examen</a>
       </div>
-    </section>
 
-    <form class="card" id="solicitud">
-      <h2>Flujo de Validación y Emisión (La Promesa)</h2>
-      <label for="m">Motivo de Observación / Informe Técnico (Obligatorio en caso de rechazo)</label>
-      <textarea id="m" rows="3" placeholder="Ej.: El expediente presenta omisión de la vacuna Triple Viral. Se requiere consignar la dosis faltante..."></textarea>
-      <p class="nota">Al procesar la solicitud, el sistema enviará automáticamente la tarjeta de vacunación certificada o el informe de recaudos faltantes al correo del ciudadano.</p>
-      <div class="acciones">
-        <button class="btn" type="button"><i class="fa fa-check"></i> Aprobar y Enviar Tarjeta</button>
-        <button class="btn rojo" type="button"><i class="fa fa-times"></i> Rechazar y Enviar Informe de Faltantes</button>
-      </div>
-    </form>
+      <h5 class="fw-bold text-azul mb-3">2. Dictamen Sanitario (Flujo "La Promesa")</h5>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Informe Técnico / Observaciones</label>
+          <textarea class="form-control" rows="3" placeholder="Redacte el dictamen de aprobación o rechazo..."></textarea>
+        </div>
+        <div class="d-flex gap-3">
+          <button type="button" class="btn btn-turquesa" onclick="alert('¡Promesa Aprobada! Tarjeta digital certificada y enviada al correo.')">
+            <i class="fa-solid fa-circle-check me-2"></i>Aprobar y Emitir Tarjeta
+          </button>
+          <button type="button" class="btn btn-danger" onclick="alert('Solicitud rechazada. Informe de faltantes enviado al correo.')">
+            <i class="fa-solid fa-circle-xmark me-2"></i>Rechazar Solicitud
+          </button>
+        </div>
+      </form>
+    </div>
   </main>
 
-  <footer>
-    Sistema Nacional de Vacunación · Subregión de Salud Guárico
-  </footer>
+  <footer>República Bolivariana de Venezuela · Sistema Nacional de Vacunación © 2026</footer>
 </body>
 </html>
